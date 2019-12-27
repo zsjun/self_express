@@ -1,1 +1,1 @@
-# self_redux
+# 从 0 到 1 编写 redux
