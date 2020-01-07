@@ -5,7 +5,7 @@ app.use((req, res) => {
 });
 app.use((req, res) => {
   console.log("22222222");
-  res.end("hello myKoa");
+  res.end("hello world");
 });
 // 监听端口号
 app.listen(3011, err => {
