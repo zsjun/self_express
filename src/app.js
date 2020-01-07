@@ -1,5 +1,5 @@
 const http = require("http");
-class Koa {
+class MyKoa {
   constructor(props) {
     this.midderWare = [];
   }
@@ -9,13 +9,11 @@ class Koa {
   }
   listen(...args) {
     const server = http.createServer((req, res) => {
-      console.log(Array.isArray(this.midderWare));
       this.midderWare.forEach(function(fn) {
-        console.log(fn);
         return fn(req, res);
       });
     });
     server.listen(...args);
   }
 }
-module.exports = Koa;
+module.exports = MyKoa;
