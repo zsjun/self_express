@@ -1,11 +1,12 @@
 const MyKoa = require("./app.js");
+
 const app = new MyKoa();
 app.use((req, res) => {
-  console.log("11111111");
+  console.log("11111111", res.status);
 });
 app.use((req, res) => {
-  console.log("22222222");
-  res.end("hello world");
+  console.log("22222222", req);
+  res.res.end("hello world");
 });
 // 监听端口号
 app.listen(3011, err => {
