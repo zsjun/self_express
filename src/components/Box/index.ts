@@ -12,12 +12,8 @@ import { nfn } from "../../common";
  * 基本的盒子，用于组成页面的各个小容器
  * 可设置标题，自带Loading样式，自身可判断是否有数据而进行展示/隐藏
  */
-function Box({ title, data, classes, style }) {
-  return (
-    <div className={classes} style={style}>
-      sdd
-    </div>
-  );
+function Box() {
+  return <div>sdd</div>;
 }
 Box.defaultProps = {
   isLoading: false,
