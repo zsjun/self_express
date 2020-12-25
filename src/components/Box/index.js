@@ -3,99 +3,16 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import iconArrow from "./images/coor-arrow.svg";
 
-import Icon from "../Icon";
-import Loading from "../Loading";
-import NoResult from "../NoResult";
-import Item from "../Item";
-
 import isEmpty from "lodash/isEmpty";
 import isBoolean from "lodash/isBoolean";
 import isObject from "lodash/isObject";
 import { nfn } from "../../common";
 
-function getContent({ show, loading, error, children, emptyDesc }) {
-  if (error) {
-    return <NoResult desc={error} />;
-  }
-  if (loading) {
-    return <Loading className="box-loading" size="lg" />;
-  }
-  if (show) {
-    return children;
-  }
-  return <NoResult desc={emptyDesc} />;
-}
-
-function Title({ title, collapse, toggleRender, open, setOpen }) {
-  return (
-    <div className="box-title" test-role="time-content">
-      {title}
-      <Item show={collapse}>
-        <div className="box-title-toggle" onClick={() => setOpen(!open)}>
-          {toggleRender ? (
-            toggleRender(open)
-          ) : (
-            <Fragment>
-              <Icon className="box-title-toggle-icon" link={iconArrow} />
-              {open ? "收起" : "展开"}
-            </Fragment>
-          )}
-        </div>
-      </Item>
-    </div>
-  );
-}
-
 /**
  * 基本的盒子，用于组成页面的各个小容器
  * 可设置标题，自带Loading样式，自身可判断是否有数据而进行展示/隐藏
  */
-function Box({
-  title,
-  data,
-  className,
-  border,
-  collapse,
-  defaultOpen,
-  error,
-  isLoading,
-  children,
-  emptyDesc,
-  contentHeight,
-  style,
-  onToggle,
-  toggleRender,
-}) {
-  const [open, setOpen] = useState(defaultOpen);
-  useEffect(() => {
-    if (defaultOpen !== open) {
-      setOpen(defaultOpen);
-    }
-  }, [defaultOpen]);
-
-  const classes = classNames("box", className, {
-    border,
-    collapse,
-    open,
-  });
-
-  const isBoxShow = (data) => {
-    // 正在加载时，展示Box
-    if (Array.isArray(data)) {
-      return data.length;
-    } else if (isObject(data)) {
-      return !isEmpty(data);
-    } else {
-      return data && data !== 0;
-    }
-  };
-  const show = isBoxShow(data);
-
-  const onToggleClick = useCallback(() => {
-    setOpen(!open);
-    onToggle(!open);
-  }, [open, onToggle]);
-
+function Box({ title, data, classes, style }) {
   return (
     <div className={classes} style={style}>
       sdd
