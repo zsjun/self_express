@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // 把没有定义类型的默认为any
+    "noImplicitAny": true,
+    // Specify module code generation
+    "module": "es6",
+    // 编译成es5
+    "target": "es5",
+    // 支持jsx
+    "jsx": "react",
+    // 删除注释
+    "removeComments": true
+  }
+}
