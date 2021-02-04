@@ -14,7 +14,8 @@
   "homepage": "https://github.com/zsjun/zUi#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server  --mode development"
+    "start": "webpack serve  --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "description": "",
