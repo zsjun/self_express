@@ -1,8 +1,9 @@
 import * as React from "react";
 import { App } from "./App";
 
+// Reference to our App.ts class
 export interface IMainProps {
-  app: App; // Reference to our App.ts class
+  app: App;
 }
 
 export class Main extends React.Component<IMainProps, {}> {
