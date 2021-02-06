@@ -9,6 +9,8 @@
 /dist
 /docs-dist
 
+.docz
+
 # misc
 .DS_Store
 
