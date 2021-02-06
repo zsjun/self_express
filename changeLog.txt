@@ -1,2 +1,8 @@
 # 增加docz
 1 安装了docz作为文档输出工具
+
+
+
+# npm包作用
+
+1 gatsby-plugin-sass和node-sass 用来在docz中编译sass
