@@ -1,8 +1,7 @@
 import React from "react";
 
 import { AlertProps, KindMap } from "./interface";
-
-const prefixCls = "happy-alert";
+import "./style/index";
 
 const kinds: KindMap = {
   info: "#5352ED",
@@ -13,13 +12,13 @@ const kinds: KindMap = {
 
 const Alert: React.FC<AlertProps> = ({ children, kind = "info", ...rest }) => (
   <div
-    className={prefixCls}
+    className="Alert"
     style={{
       background: kinds[kind],
     }}
     {...rest}
   >
-    dsdss11sdd99998skdjskslldjsidhs
+    dsdss11sdd99998skdjssdsdsdsjlkjkslldjsidhs
     {children}
   </div>
 );
