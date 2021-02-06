@@ -10,6 +10,8 @@
     // 支持jsx
     "jsx": "react",
     // 删除注释
-    "removeComments": true
+    "removeComments": true,
+    // 默认可以导出
+    "allowSyntheticDefaultImports": true,
   }
 }
